@@ -1,0 +1,45 @@
+# CODEOWNERS - Template for Product
+# This file defines code ownership for the repository
+# Learn more: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owners (fallback)
+*                           @{{PRODUCT}}-equipo
+
+# Frontend
+/frontend/                  @{{PRODUCT}}-frontend @{{PRODUCT}}-techlead
+/frontend/components/       @{{PRODUCT}}-frontend-senior
+/frontend/pages/            @{{PRODUCT}}-frontend
+
+# Backend
+/backend/                   @{{PRODUCT}}-backend @{{PRODUCT}}-techlead
+/backend/api/               @{{PRODUCT}}-backend-senior
+/backend/services/          @{{PRODUCT}}-backend
+
+# Infrastructure
+/infra/                     @{{PRODUCT}}-devops @platform-admins
+*.tf                        @{{PRODUCT}}-devops
+*.tfvars                    @{{PRODUCT}}-devops
+
+# CI/CD
+.github/                    @platform-admins
+.github/workflows/          @platform-admins @{{PRODUCT}}-devops
+
+# Documentation
+/docs/                      @{{PRODUCT}}-techlead
+*.md                        @{{PRODUCT}}-techlead
+
+# Configuration
+CODEOWNERS                  @{{PRODUCT}}-techlead
+.github/CODEOWNERS          @{{PRODUCT}}-techlead
+.commitlintrc.js            @platform-admins
+.releaserc.json             @platform-admins
+
+# Tests
+/tests/                     @{{PRODUCT}}-backend @{{PRODUCT}}-frontend
+*.test.js                   @{{PRODUCT}}-backend @{{PRODUCT}}-frontend
+*.spec.js                   @{{PRODUCT}}-backend @{{PRODUCT}}-frontend
+
+# Build
+/package.json               @platform-admins @{{PRODUCT}}-techlead
+/package-lock.json          @platform-admins
+/yarn.lock                  @platform-admins
