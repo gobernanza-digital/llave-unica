@@ -1,45 +1,16 @@
-# CODEOWNERS - Template for Product
-# This file defines code ownership for the repository
-# Learn more: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# CODEOWNERS - Gobernanza Digital SGD
+# Este archivo define la propiedad del codigo y revision obligatoria en Pull Requests
+# Documentacion: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
-# Global owners (fallback)
-*                           @{{PRODUCT}}-equipo
+# Equipo dueno del producto (revision obligatoria por defecto)
+*                           @gobernanza-digital/llave-unica-equipo
 
-# Frontend
-/frontend/                  @{{PRODUCT}}-frontend @{{PRODUCT}}-techlead
-/frontend/components/       @{{PRODUCT}}-frontend-senior
-/frontend/pages/            @{{PRODUCT}}-frontend
+# Infraestructura y configuracion Cloud
+/infra/                     @gobernanza-digital/llave-unica-equipo @gobernanza-digital/platform-admins
+*.tf                        @gobernanza-digital/platform-admins
+*.tfvars                    @gobernanza-digital/platform-admins
 
-# Backend
-/backend/                   @{{PRODUCT}}-backend @{{PRODUCT}}-techlead
-/backend/api/               @{{PRODUCT}}-backend-senior
-/backend/services/          @{{PRODUCT}}-backend
-
-# Infrastructure
-/infra/                     @{{PRODUCT}}-devops @platform-admins
-*.tf                        @{{PRODUCT}}-devops
-*.tfvars                    @{{PRODUCT}}-devops
-
-# CI/CD
-.github/                    @platform-admins
-.github/workflows/          @platform-admins @{{PRODUCT}}-devops
-
-# Documentation
-/docs/                      @{{PRODUCT}}-techlead
-*.md                        @{{PRODUCT}}-techlead
-
-# Configuration
-CODEOWNERS                  @{{PRODUCT}}-techlead
-.github/CODEOWNERS          @{{PRODUCT}}-techlead
-.commitlintrc.js            @platform-admins
-.releaserc.json             @platform-admins
-
-# Tests
-/tests/                     @{{PRODUCT}}-backend @{{PRODUCT}}-frontend
-*.test.js                   @{{PRODUCT}}-backend @{{PRODUCT}}-frontend
-*.spec.js                   @{{PRODUCT}}-backend @{{PRODUCT}}-frontend
-
-# Build
-/package.json               @platform-admins @{{PRODUCT}}-techlead
-/package-lock.json          @platform-admins
-/yarn.lock                  @platform-admins
+# CI/CD y Gobernanza
+.github/                    @gobernanza-digital/platform-admins
+CODEOWNERS                  @gobernanza-digital/platform-admins
+.github/CODEOWNERS          @gobernanza-digital/platform-admins
